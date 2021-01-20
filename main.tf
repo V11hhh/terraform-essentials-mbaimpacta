@@ -11,7 +11,7 @@ terraform {
 provider "google" {
   version = "3.5.0"
 
-  project = "gaby-cloudautomation"
+  project = "victor-mbaimpacta-turma04"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
