@@ -6,8 +6,12 @@ terraform {
       version = "3.58.0"
     }
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "=2.49.0"
+    }
+    cloudflare = {
+      source = "cloudflare/cloudflare"
+      version = "2.18.0"
     }
   }
 }
@@ -22,4 +26,10 @@ provider "google" {
 # Configura o Provider Microsoft Azure
 provider "azurerm" {
   features {}
+}
+
+# Configura o Provider CloudFlare
+provider "cloudflare" {
+  email   = var.cloudflare_email
+  api_key = var.cloudflare_api_key
 }
